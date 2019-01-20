@@ -10,3 +10,5 @@ collections:
     label: Page
     folder: "content/page"
     create: true
+    fields:
+      - name: "Title"
