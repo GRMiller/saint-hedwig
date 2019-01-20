@@ -1,0 +1,23 @@
+<nav class="nav-main">
+  <div class="hamburger">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </div>
+
+  <ul class="menu-main">
+
+    {{ $currentPage := . }}
+
+    {{ range .Site.Menus.main }}
+  
+      <li class="menu-item">
+        <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      </li>
+      
+    {{ end }}
+
+  </ul>
+</nav>
