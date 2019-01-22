@@ -1,14 +1,74 @@
+#
+# Settings
+#
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
 media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
-
+public_folder: "/uploads"
+# Beta features
+publish_mode: editorial_workflow
+#
+# Collections
+#
 collections:
-  - name: "page"
-    label: Page
-    folder: "content/page"
+  - name: "Pages"
+    label: "Page"
+    folder: "content/pages"
     create: true
+    editor:
+      preview: false
     fields:
-      - name: "Title"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Menu Weight"
+        name: "weight"
+        widget: "number"
+        default: "0"
+        valueType: "int"
+        min: 0
+        max: 99
+        hint: "The higher the number, the lower/further right it will appear in the menu. A 0 leaves a page out of the main navigation."
+      - label: "Hero Section"
+        name: "hero_section"
+        widget: "object"
+          - label: "Hero Media"
+            name: "hero_media"
+            widget: "image"
+            required: false
+            hint: "Preferred photo dimensions are ### X ###." #@todo
+          - label: "Media Overlay/Background Color"
+            name: "hero_media_overlay"
+            widget: "select"
+            options: ["none","blue","green","red","gray - dark","gray - light"]
+          - label: "Hero Title"
+            name: "hero_title"
+            widget: "string"
+            pattern: /^[a-z]{0,75}$/
+          - label: "Hero Text"
+            name: "hero_text"
+            widget: "string"
+            pattern: /^[a-z]{0,250}$/
+            required: false
+          - label: "Alignment"
+            name: "heron_alignment"
+            widget: "select"
+            options: ["left","center","right"]
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "SEO Description"
+        name: "seo_description"
+        widget: "text"
+        required: false
+      - label: "Meta Title"
+        name: "metatitle"
+        widget: "text"
+        required: false
+
+
