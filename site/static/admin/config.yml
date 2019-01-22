@@ -8,7 +8,7 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
-media_folder: "static/media/uploads"
+media_folder: "site/static/media/uploads"
 public_folder: "/media"
 display_url: https://zealous-pike-2f4b9b.netlify.com
 logo_url: https://zealous-pike-2f4b9b.netlify.com/media/logo-image-text.png
@@ -21,7 +21,7 @@ collections:
   # Pages
   - name: "Pages"
     label: "Page"
-    folder: "content/pages"
+    folder: "site/content/pages"
     create: true
     editor:
       preview: false
