@@ -11,7 +11,7 @@ sitemap:
 media_folder: "static/images/uploads"
 public_folder: "/uploads"
 # Beta features
-publish_mode: editorial_workflow
+##publish_mode: editorial_workflow
 #
 # Collections
 #
