@@ -8,14 +8,17 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
-media_folder: "static/images/uploads"
-public_folder: "/uploads"
+media_folder: "static/media/uploads"
+public_folder: "/media"
+display_url: https://zealous-pike-2f4b9b.netlify.com
+logo_url: https://zealous-pike-2f4b9b.netlify.com/media/logo-image-text.png
 # Beta features
 publish_mode: editorial_workflow
 #
 # Collections
 #
 collections:
+  # Pages
   - name: "Pages"
     label: "Page"
     folder: "content/pages"
@@ -35,29 +38,29 @@ collections:
         max: 99
         hint: "The higher the number, the lower/further right it will appear in the menu. A 0 leaves a page out of the main navigation."
       - label: "Hero Section"
-        name: "hero_section"
+        name: "hero"
         widget: "object"
         fields:
-          - label: "Hero Media"
-            name: "hero_media"
+          - label: "Hero Image"
+            name: "image"
             widget: "image"
             required: false
             hint: "Preferred photo dimensions are ### X ###." #@todo
           - label: "Media Overlay/Background Color"
-            name: "hero_media_overlay"
+            name: "overlay"
             widget: "select"
             options: ["none","blue","green","red","gray - dark","gray - light"]
           - label: "Hero Title"
-            name: "hero_title"
+            name: "title"
             widget: "string"
             pattern: /^[a-z]{0,75}$/
           - label: "Hero Text"
-            name: "hero_text"
+            name: "text"
             widget: "string"
             pattern: /^[a-z]{0,250}$/
             required: false
           - label: "Alignment"
-            name: "heron_alignment"
+            name: "alignment"
             widget: "select"
             options: ["left","center","right"]
       - label: "Body"

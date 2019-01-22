@@ -1,5 +1,6 @@
 {{ define "main" }}
-<div id="frontpage" class="frontpage">
+<div class="page">
+  
 {{ partial "hero" (dict "image" .Params.hero.image "title" .Params.hero.title "text" .Params.hero.text "alignment" .Params.hero.alignment "overlay" .Params.hero.overlay) }}
 
 </div>

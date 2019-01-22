@@ -8,3 +8,9 @@
 
 [context.deploy-preview]
   command = "npm run build:preview"
+
+[[headers]]
+  for = "/*.woff2?"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/font-woff"

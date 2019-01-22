@@ -1,0 +1,16 @@
+<div class="section section-hero {{ .alignment }}
+  {{ if not .image }}
+    bg-color--{{ .overlay }}
+  {{ else }}     
+    overlay-{{ .overlay }}
+  {{ end }}"
+
+  {{ with .image }} style="background-image: url({{ . }});" {{ end }}>
+
+  <div class="inner">
+
+    <h1 class="title title-hero">{{ .title }}</h1>
+  
+    </div>
+  </div>  
+</div>
