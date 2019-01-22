@@ -1,7 +1,7 @@
-baseurl = "/"
+baseurl = "/site"
 languageCode = "en-us"
 languageLang = "en"
-title = "My new Victor-Hugo site"
+title = "Friends of St. Hedwig Park"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
