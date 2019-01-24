@@ -13,7 +13,7 @@ public_folder: "/media"
 display_url: https://zealous-pike-2f4b9b.netlify.com
 logo_url: https://zealous-pike-2f4b9b.netlify.com/media/logo-image-text.png
 # Beta features
-#publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 #
 # Collections
 #
@@ -63,6 +63,25 @@ collections:
             name: "alignment"
             widget: "select"
             options: ["left","center","right"]
+      - label: "Text Section"
+        name: "text"
+        widget: "object"
+        fields: 
+          - label: "title"
+            name: title
+            widget: string
+            required: false
+          - label: "text"
+            name: text
+            widget: markdown
+          - label: "button"
+            name: button
+            widget: string
+            required: false
+          - label: "background color"
+            name: background-color
+            widget: select
+            options: ["red", "blue", "green", "none"]
       - label: "Body"
         name: "body"
         widget: "markdown"
