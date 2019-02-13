@@ -1,0 +1,27 @@
+.section-hero {
+  color: #fff;
+  font-family: 'Abril Fatface';
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 8rem 20px;
+}
+
+.section-hero > .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.title-hero {
+  padding: 0 0 1em 0;
+}
+
+.text-hero {
+  font-size: 1.5em;
+}

@@ -1,0 +1,22 @@
+<div class="section section-text {{ .alignment }} bg-color--{{ .overlay }} {{ with .image }}has-image section-text-image {{ end }} {{ with .direction }} {{.}} {{ end }}">
+  <div class="inner">
+    {{ with .image }}
+      <div class="image-wrapper">
+        <img src="{{.}}" />
+      </div>
+      <div class="content-wrapper">
+    {{ end }}
+    {{ with .title }}
+      <h3>{{.}}</h3>
+    {{ end}}
+    {{ with .text }}
+      <p>{{.}}</p>
+    {{ end }}
+    {{ if (isset . "link") }}
+      <a href="{{ .url }}" class="button-{{ .button }}">{{ .link }}</a>
+    {{ end }}
+    {{ with .image }}
+      </div>
+    {{ end }}
+  </div>
+</div>

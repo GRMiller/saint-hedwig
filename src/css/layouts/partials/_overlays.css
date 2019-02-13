@@ -1,0 +1,25 @@
+.overlay-blue,
+.overlay-green,
+.overlay-red {
+  position: relative;
+}
+.overlay-blue::before,
+.overlay-green::before,
+.overlay-red::before {
+  content: '';
+  opacity: 0.75;
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.overlay-blue::before {
+  background-color: var(--blue);
+}
+.overlay-green::before {
+  background-color: var(--green);
+}
+.overlay-red::before {
+  background-color: var(--red);
+}

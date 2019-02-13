@@ -1,1 +1,6 @@
-@import "_base.css";
+/* Variables */
+@import "_vars.css";
+/* Reset */
+@import "_reset.css"; 
+
+@import "_text.css";

@@ -1,20 +1,18 @@
 {{ define "main" }}
 <div id="frontpage" class="frontpage">
-{{ partial "hero" (dict "image" .Params.hero.image "title" .Params.hero.title "text" .Params.hero.text "alignment" .Params.hero.alignment "overlay" .Params.hero.overlay) }}
-
-<div class="text-section">
-  The St. Hedwig Park, in Southwest Detroit, serves a community of 33,000 people. 11,000 Kids. Over 900 PK to 8th Graders use the park as their. And many baseball, soccer, and football teams flock to this park for games and practice. But St. Hedwig Park needs some help...
-</div>
-<div class="photo carousel"></div>
-<div class="quote-section overlay-red">
-  <div class="inner">
-    <blockquote class="quote">
-      Children need freedom and time to play. Play is not a luxury. Play is a neccessity.
-      <span class="blockquote-author"></span>
-    </blockquote>
-  </div>
-</div>
-<div class="list-section"></div>
-<div class="text-section"></div>
+  {{ with .Params.hero }}
+    {{ partial "hero" (dict "image" .image "title" .title "text" .text "alignment" .alignment "overlay" .overlay) }}
+  {{ end }}
+  {{ with .Params.post_hero_text }}
+    {{ partial "text-section" (dict "text" .text "overlay" .overlay "alignment" .alignment "link" .link "url" .url) }}
+  {{ end }}
+  {{ with .Params.quote_section }}
+    {{ partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations)}}
+  {{ end }}
+  {{ with .Params.park_needs }}
+    {{ partial "text-section" (dict "image" .image "overlay" "title" .title "") }}
+  {{ end }}
+  <div class="list-section"></div>
+  <div class="text-section"></div>
 </div>
 {{ end }}

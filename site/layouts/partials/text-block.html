@@ -1,0 +1,12 @@
+<div class="section section-text-block overlay-{{ .overlay }}"
+
+{{ with .image }} style="background-image: url({{ . }});" {{ end }}>
+  <div class="inner">
+    {{ if (isset . "quotations") }}
+    <div class="quote">
+      <p class="quote-text">{{ .quote }}</p>
+      <span class="quote-author"></span>
+    </div>
+    {{ end }}
+  </div>
+</div>
