@@ -1,18 +1,31 @@
-{{ define "main" }}
+{{- define "main" -}}
 <div id="frontpage" class="frontpage">
-  {{ with .Params.hero }}
-    {{ partial "hero" (dict "image" .image "title" .title "text" .text "alignment" .alignment "overlay" .overlay) }}
-  {{ end }}
-  {{ with .Params.post_hero_text }}
-    {{ partial "text-section" (dict "text" .text "overlay" .overlay "alignment" .alignment "link" .link "url" .url) }}
-  {{ end }}
-  {{ with .Params.quote_section }}
-    {{ partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations)}}
-  {{ end }}
-  {{ with .Params.park_needs }}
-    {{ partial "text-section" (dict "image" .image "overlay" "title" .title "") }}
-  {{ end }}
-  <div class="list-section"></div>
-  <div class="text-section"></div>
+  {{- with .Params.hero -}}
+    {{- partial "hero" (dict "image" .image "title" .title "text" .text "alignment" .alignment "overlay" .overlay) -}}
+  {{- end -}}
+
+  {{- with .Params.post_hero_text -}}
+    {{- partial "text-section" (dict "text" .text "overlay" .overlay "alignment" .alignment "link" .link "url" .url) -}}
+  {{- end -}}
+
+  {{- with .Params.quote_section -}}
+    {{- partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations) -}}
+  {{- end -}}
+
+  {{- with .Params.park_needs -}}
+    {{- partial "text-section" (dict "image" .image "direction" .direction "title" .title "text" .text "list" .list) -}}
+  {{- end -}}
+
+  {{- with .Params.park_plan -}}
+    {{- partial "text-section" (dict "image" .image "direction" .direction "title" .title "text"  .text "list" .list "link" .link "url" .url) -}}
+  {{- end -}}
+
+  {{- with .Params.quote_section_two -}}
+    {{- partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations) -}}
+  {{- end -}}
+
+  {{- with .Params.cta -}}
+    {{- partial "cta" (dict "text" .text "button_text" .button_text "url" .button_destination "button_color" .button_color "background_color" .background_color) -}}
+  {{- end -}}
 </div>
-{{ end }}
+{{- end -}}
