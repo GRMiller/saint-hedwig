@@ -1,9 +1,9 @@
 <div class="section section-hero {{ .alignment }}
   {{ if not .image }}
     bg-color--{{ .overlay }}
-  {{ else }}     
+  {{- else -}}     
     overlay-{{ .overlay }}
-  {{ end }}"
+  {{- end -}}"
 
   {{ with .image }} style="background-image: url({{ . }});" {{ end }}>
 
