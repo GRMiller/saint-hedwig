@@ -2,5 +2,17 @@
 
 import "./css/main.css";
 
-// Say hello
-console.log("🦊 Hello! Edit me in src/index.js");
+// Replace no-js
+document.documentElement.className = document.documentElement.className.replace("no-js","js");
+
+// Hamburger
+const hamburger = document.querySelector(".hamburger");
+
+if (hamburger) {
+  hamburger.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    hamburger.classList.toggle("is-active");
+  });
+}
+
