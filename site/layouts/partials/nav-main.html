@@ -5,21 +5,19 @@
     </span>
   </button>
 
-  <ul class="menu-main">
+  <ul class="menu menu-main">
 
-    {{ $currentPage := . }}
+    {{- $currentPage := . -}}
 
-    {{ range .Site.Menus.main }}
-
-    {{ printf }}
+    {{- range .Site.Menus.main -}}
   
       <li class="menu-item">
-        <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
-          {{ .Name }}
+        <a class="" href="{{ .URL }}">
+          {{- .Name -}}
         </a>
       </li>
       
-    {{ end }}
+    {{- end -}}
 
   </ul>
 </nav>
