@@ -1,5 +1,7 @@
 @import "partials/_header.css";
 @import "partials/_hero.css";
+@import "partials/_logo.css";
+@import "partials/_nav.css";
 @import "partials/_overlays.css";
 @import "partials/_quotes.css";
 @import "partials/_text-section.css";

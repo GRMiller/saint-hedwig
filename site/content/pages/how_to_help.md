@@ -1,5 +1,5 @@
 ---
-title: About
+title: How to Help
 weight: '0'
 hero:
   alignment: center
@@ -7,7 +7,7 @@ hero:
   title: Passion led us here. Collaboration will take us there.
 menu:
   main:
-    name: About
-    weight: '1'
+    name: How to Help
+    weight: '2'
 ---
 We will build an awesome park!

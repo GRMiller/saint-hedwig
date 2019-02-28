@@ -1,0 +1,128 @@
+/**
+ * Mobile Menu
+ */
+.menu-main {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100vh - 90px);
+  list-style: none;
+  opacity: 0;
+  padding: 3.5rem 1rem 2rem;
+  position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+  text-align: center;
+  transform: translateY(-120%);
+  transition: transform 500ms ease-in, opacity 300ms ease-in;
+}
+  .is-active .menu-main {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: transform 500ms ease-out, opacity 400ms ease-in-out 300ms; /*@todo: fix animation by getting rid of delay and just uzing a custom animation to fade in the opacity more gradually at first */
+  }
+
+.menu-main .menu-item {
+  margin: 1rem 0;
+}
+
+.menu-main .menu-item a {
+  color: var(--blue);
+  display: inline-block;
+  font-family: 'Raleway';
+  font-size: 1.75rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/**
+ * Tablet and larger
+ */
+@media all and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu-main {
+    background-color: none;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    opacity: 1;
+    padding: 0;
+    position: static;
+    transform: translateY(0%);
+    transition: none;
+  }
+
+  .menu-main .menu-item {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .menu-main .menu-item {
+    margin: 0 1.5vw;
+  }
+}
+
+/**
+ * Link hover, active, and visited 
+ */
+.menu-main .menu-item a {
+  position: relative;
+}
+
+.menu-main .menu-item a::after,
+.menu-main .menu-item a::before {
+  content: '';
+  position: absolute;
+    bottom: 5px;
+  height: 5px;
+  margin: 5px 0 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  width: 0px;
+}
+
+.menu-main .menu-item a::after {
+  background-color: var(--red);
+  right: calc(50%);
+}
+
+.menu-main .menu-item a::before {
+  background-color: var(--red);
+  left: calc(50%);
+}
+
+.menu-main .menu-item a:hover::after,
+.menu-main .menu-item a:hover::before {
+  opacity: 1;
+  width: 50%;
+}
+
+/**
+ * No-JS Styling 
+ */
+.nojs .hamburger {
+  display: none;
+}
+
+.no-js .menu-main {
+  display: block;
+}
+.nojs .menu-item {
+  display: block;
+}
+
+.nojs .menu-item a {
+  color: var(--blue);
+  padding: .5rem;
+  text-decoration: none;
+}
