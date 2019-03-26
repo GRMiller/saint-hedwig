@@ -1,6 +1,7 @@
 .overlay-blue,
 .overlay-green,
 .overlay-red {
+  color: #fff;
   position: relative;
 }
 .overlay-blue::before,
@@ -15,11 +16,11 @@
     left: 0;
 }
 .overlay-blue::before {
-  background-color: var(--blue);
+  background-color: var(--color-blue, #1375B7);
 }
 .overlay-green::before {
-  background-color: var(--green);
+  background-color: var(--color-green, #89BF48);
 }
 .overlay-red::before {
-  background-color: var(--red);
+  background-color: var(--color-red ,#BC2031);
 }

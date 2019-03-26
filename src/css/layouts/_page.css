@@ -1,0 +1,4 @@
+.page {
+  position: relative;
+  top: var(--header-height, 90px);
+}

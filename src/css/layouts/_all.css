@@ -6,4 +6,5 @@
 @import "partials/_quotes.css";
 @import "partials/_text-section.css";
 
+@import "_page.css";
 @import "_homepage.css";
