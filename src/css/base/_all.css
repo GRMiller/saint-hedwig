@@ -3,4 +3,8 @@
 /* Reset */
 @import "_reset.css"; 
 
-@import "_text.css";
+@import "_typography.css";
+
+@import "_bg-colors.css";
+
+@import "_buttons.css";
