@@ -5,8 +5,6 @@ hero:
   overlay: blue
   title: Friends of St. Hedwig Park
   text: A neighborhood reimagined through collaboration
-  link: How to Help
-  url: /how-to-help
   button: true
   alignment: center
 post_hero_text:
