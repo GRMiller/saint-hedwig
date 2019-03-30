@@ -53,11 +53,9 @@ collections:
           - label: "Hero Title"
             name: "title"
             widget: "string"
-            pattern: /^[a-z]{0,75}$/
           - label: "Hero Text"
             name: "text"
             widget: "string"
-            pattern: /^[a-z]{0,250}$/
             required: false
           - label: "Alignment"
             name: "alignment"
