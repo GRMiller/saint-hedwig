@@ -1,8 +1,533 @@
+@import "imports/_all.css";
 
 /*
-  Imports
+*
+* Vars
+*
+ */
+ :root {
+  --color-blue: #1375B7;
+  --color-red: #BC2031;
+  --color-green: #89BF48;
+  --color-gray-dark: #2A2D34;
+  --color-gray-light: #E0E0E2;
+  --size-base: 16px;
+
+  /* Text */
+  --text-size: 16px;
+  --text-color: #2c2c2c;
+}
+
+/*
+*
+* Reset
+* 
  */
 
-@import "/base/_all.css";
-@import "/imports/_all.css";
-@import "/layouts/_all.css";
+ html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style-position: inside;
+}
+
+img {
+  line-height: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+*
+* Base Typography
+*
+ */
+
+/* Setup */
+body {
+  /* Change default typefaces here */
+  color: #2c2c2c;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+/* Copy & Lists */
+p {
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+@media (min-width: 43.75em) {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.375;
+  }
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+ul li,
+ol li {
+  line-height: 1.325;
+}
+@media (min-width: 43.75em) {
+  ul li,
+  ol li {
+    line-height: 1.425;
+  }
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-size: 1.25em; /* 20px / 16px */
+  line-height: 1.25; /* 25px / 20px */
+}
+@media (min-width: 43.75em) {
+  blockquote {
+    font-size: 1.5em; /* 24px / 16px = */
+    line-height: 1.45833333; /* 35px / 24px */
+  }
+}
+
+/* Headings */
+h1 {
+  font-size: 2em; /* = 32px */
+  line-height: 1.25; /* 45px / 36px */
+}
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.5em; /* = 40px */
+    line-height: 1.125;
+  }
+}
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em; /* = 48px */
+    line-height: 1.05; /* keep to a multiple of the 20px line height 
+    and something more appropriate for display headings */
+  }
+}
+
+h2 {
+  font-size: 1.625em; /* = 26px */
+  line-height: 1.15384615; /* 30px / 26px */
+}
+@media (min-width: 43.75em) {
+  h2 {
+    font-size: 2em; /* = 32px */
+    line-height: 1.25;
+  }
+}
+@media (min-width: 56.25em) {
+  h2 {
+    font-size: 2.25em; /* = 36px */
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: 1.375em; /* = 22px */
+  line-height: 1.13636364; /* 25px / 22px */
+}
+
+@media (min-width: 43.75em) {
+  h3 {
+    font-size: 1.5em; /* = 24px */
+    line-height: 1.25;
+  }
+}
+@media (min-width: 56.25em) {
+  h3 {
+    font-size: 1.75em; /* = 28px */
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: 1.125em; /* = 18px */
+  line-height: 1.11111111;
+}
+@media (min-width: 43.75em) {
+  h4 {
+    line-height: 1.22222222; /* (22px / 18px */
+  }
+}
+
+h5 {
+  font-size: 0.875em; /* = 14px */
+  line-height: 1.11111111;
+}
+@media (min-width: 43.75em) {
+  h5 {
+    line-height: 1.22222222;
+  }
+}
+
+h6 {
+  font-size: 0.75em; /* = 12px */
+  line-height: 1.11111111;
+}
+@media (min-width: 43.75em) {
+  h6 {
+    line-height: 1.22222222;
+  }
+}
+
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  padding: 0;
+  line-height: 33px;
+}
+
+/*
+*
+* Alignment
+*
+ */
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+/*
+*
+* Background & Overlay Colors
+* 
+ */
+ .bg-color--none {
+  background-color: none;
+}
+
+.bg-color--red {
+  background-color: var(--color-red ,#BC2031);
+  color: #fff;
+}
+
+.bg-color--blue {
+  background-color: var(--color-blue, #1375B7);
+  color: #fff;
+}
+
+.bg-color--green {
+  background-color: var(--color-green, #89BF48);
+  color: #fff;
+}
+
+.overlay-blue,
+.overlay-green,
+.overlay-red {
+  color: #fff;
+  position: relative;
+}
+.overlay-blue::before,
+.overlay-green::before,
+.overlay-red::before {
+  content: '';
+  opacity: 0.75;
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.overlay-blue::before {
+  background-color: var(--color-blue, #1375B7);
+}
+.overlay-green::before {
+  background-color: var(--color-green, #89BF48);
+}
+.overlay-red::before {
+  background-color: var(--color-red ,#BC2031);
+}
+
+/*
+*
+* Buttons
+*
+ */
+.button {
+  background-color: var(--color-green);
+  color: #fff;
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: .25em 1.25em;
+  margin: 1rem auto;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*
+*
+* Header
+*
+ */
+:root {
+  --header-height: 90px;
+}
+
+.header {
+  /* background-color: rgba(224, 224, 226, 0.15); */
+  background-color: rgba(255,255,255,1);
+  height: var(--header-height, 90px);
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+  z-index: 10000;
+}
+
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+}
+
+.page { /* @todo can i change this to .header + div */
+  position: relative;
+  top: var(--header-height, 90px);
+}
+
+/*
+*
+* Logo
+*
+ */
+.logo {
+  height: 50px;
+}
+
+.logo-full {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .logo {
+    height: 60px;
+  }
+}
+
+/*
+*
+* Menu Main
+* 
+ */
+/* Mobile */
+.menu-main {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100vh - 90px);
+  list-style: none;
+  margin-top: 0;
+  opacity: 0;
+  padding: 3.5rem 1rem 2rem;
+  position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+  text-align: center;
+  transform: translateY(-120%);
+  transition: transform 500ms ease-in, opacity 300ms ease-in;
+}
+  .is-active .menu-main {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: transform 500ms ease-out, opacity 400ms ease-in-out 300ms; /*@todo: fix animation by getting rid of delay and just uzing a custom animation to fade in the opacity more gradually at first */
+  }
+
+.menu-main .menu-item {
+  margin: 1rem 0;
+}
+
+.menu-main .menu-item a {
+  color: var(--blue);
+  display: inline-block;
+  font-family: 'Raleway';
+  font-size: 1.75rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* Tablet and larger */
+@media all and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu-main {
+    background-color: none;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    opacity: 1;
+    padding: 0;
+    position: static;
+    transform: translateY(0%);
+    transition: none;
+  }
+
+  .menu-main .menu-item {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .menu-main .menu-item {
+    margin: 0 1.5vw;
+  }
+}
+
+/* Link hover, active, and visited  */
+.menu-main .menu-item a {
+  position: relative;
+}
+
+.menu-main .menu-item a::after,
+.menu-main .menu-item a::before {
+  content: '';
+  position: absolute;
+    bottom: 5px;
+  height: 5px;
+  margin: 5px 0 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  width: 0px;
+}
+
+.menu-main .menu-item a::after {
+  background-color: var(--red);
+  right: calc(50%);
+}
+
+.menu-main .menu-item a::before {
+  background-color: var(--red);
+  left: calc(50%);
+}
+
+.menu-main .menu-item a:hover::after,
+.menu-main .menu-item a:hover::before {
+  opacity: 1;
+  width: 50%;
+}
+
+/* No-JS Styling */
+.nojs .hamburger {
+  display: none;
+}
+
+.no-js .menu-main {
+  display: block;
+}
+.nojs .menu-item {
+  display: block;
+}
+
+.nojs .menu-item a {
+  color: var(--blue);
+  padding: .5rem;
+  text-decoration: none;
+}
+
+/*
+*
+* Sections
+*
+ */
+/* Hero */
+.section-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 20px;
+}
+
+.section-hero > .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  position: relative;
+  z-index: 1;
+}
+
+/* Quote */
+.quote-section {
+  background: url('/images/pengsheng-guo-134596-unsplash.jpg');
+  background-size: cover;
+  background-position: left;
+  padding: 2rem 20px;
+  color: #fff;
+  font-family: 'Abril Fatface';
+}
+
+.quote-section > .inner {
+  position: relative;
+}
+
+.quote {
+  font-size: 1.5em;
+}
+
+/* Text */
+.section-text { 
+  padding: 2rem 20px;
+}
+
+/*
+*
+* Text Styles
+*
+ */
+ .title {
+  font-family: 'Abril Fatface'; /* @todo: add backups */
+}
+
+.title-hero {
+  padding: 0 0 1em 0;
+}
+
+.text-hero {
+  font-family: 'Abril Fatface'; /*@todo: add backup font */
+  font-size: 1.5em;
+}
