@@ -9,6 +9,14 @@
 
   <div class="inner">
     <h1 class="title title-hero">{{ .title }}</h1>
-    <div class="text text-hero">{{ .text }}</div>  
+    {{ if .subtitle }}
+    <div class="subtitle subtitle-hero">{{ .subtitle }}</div>
+    {{ end }}
+    {{ if .text }}
+    <div class="text text-hero">{{ .text }}</div> 
+    {{ end }} 
+    {{ if .link_text }}
+    <a href="{{ .link_url }}" class="{{ if .button }}button{{ end }}">{{ .link_text }}</a>
+    {{ end }}
   </div>
-</div>  
+</div> 
