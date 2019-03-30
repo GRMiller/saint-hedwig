@@ -9,7 +9,10 @@ hero:
   alignment: center
 post_hero_text:
   title:
-  text: St. Hedwig Park provides recreation, joy, and community to an estimated 33,000 people in Southwest Detroit. Seven schools, countless families, numerous recreational leagues, and 900+ PK to 8th graders across the street at Academy of Americas call St. Hedwig their own. But for too long they've had to take care of it alone. The Friends of St. Hedwig Park builds on the progress of the SHP Coalition and the City of Detroit by working alongside an enthusiastic group of neighbors, coaches, teachers, and non-profits. St. Hedwig Park is an unmistakable opportunity to enhance social, economic, and recreational activity in Southwest Detroit.
+  text: |-
+    St. Hedwig Park provides recreation, joy, and community to an estimated 33,000 people in Southwest Detroit. Seven schools, countless families, numerous recreational leagues, and 900+ PK to 8th graders across the street at Academy of Americas call St. Hedwig their own. But for too long they've had to take care of it alone. 
+    
+    The Friends of St. Hedwig Park builds on the progress of the SHP Coalition and the City of Detroit by working alongside an enthusiastic group of neighbors, coaches, teachers, and non-profits. St. Hedwig Park is an unmistakable opportunity to enhance social, economic, and recreational activity in Southwest Detroit.
   link: Learn More
   url: /about
   button: primary
