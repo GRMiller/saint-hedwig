@@ -8,11 +8,9 @@ hero:
 text:
   background-color: green
   text: |-
-    Test some paragraphs
+    Test some paragraphs  
 
-    Out to see how this works. 
-
-
+    Out to see how this works  
 
     Hopefully
 ---
