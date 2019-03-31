@@ -13,7 +13,7 @@ hero:
   title: About Us
 who:
   direction: ltr
-  image: /media/image006.jpg
+  image: ''
   overlay: green
   text: >-
     Friends of St. Hedwig Park is a collaborative group of individuals,
@@ -27,7 +27,7 @@ who:
   title: Who is Friends of St. Hedwig Park?
 what:
   direction: rtl
-  image: /media/image003.jpg
+  image: ''
   overlay: red
   text: >-
     The St. Hedwig Park Project is an opportunity to enhance social, economic,
@@ -75,23 +75,24 @@ plans:
   title: The Plan
 beneficiaries:
   list:
-    - item: >-
-        Almost 33K people, 11K of whom are children, live within three-quarters
-        of a mile from the park. 24.7% of this population makes below the
-        poverty level and 21.3% of househoulds have no access to a vehicle.
-    - item: >-
-        The nearly 1,000 students who attend the Academy of the Americas K-8
-        Detroit Public School located across the street regularly come to SHP
-        for their recess, team practices, school games, and much more.
-        Additionally, there are 6 other area schools that use the park for
-        practice and play.
-    - item: >-
-        Numerous Detroit-area recreation leagues of all ages, will use the field
-        for all sorts of sports
-    - item: >-
-        Community leaders & families will have shade, restrooms, and hydration
-        facilities so they can stay at the park longer and in more kind of
-        weather.
+    - >-
+      Almost 33K people, 11K of whom are children, are living within
+      three-quarters of a mile from the park. 24.7% of the population in this
+      area is below the poverty level and 21.3% of households don't have access
+      to a vehicle.
+    - >-
+      The nearly 1,000 students who attend the Academy of the Americas K-8
+      Detroit Public School located across the street enjoy the park daily
+      during their recess, team practices, and school games in SHP.
+      Additionally, 6 other area schools use the park for practice and play
+    - >-
+      Numerous Detroit-area recreation leagues use the field already. More will
+      be able to use it as we rebuild
+    - >-
+      Community Leaders and families will have access to a new shelter (there is
+      currently no shelter), restrooms, and hydration facilities, allowing for
+      more members of the family to stay out at the park for longer, even on the
+      hottest Michigan summer days.
   overlay: red
   title: The Beneficiaries
 cta:
@@ -102,9 +103,13 @@ cta:
   text: >-
     Change will not happen without your help. All of us together can build great
     things.
+menu:
+  main:
+    name: About Us
+    weight: '1'
 people:
   title: People at Friends of SHP
 donors:
-  title: Donors to Friends of SHP
+  title: Donors of Friends of SHP
 ---
 
