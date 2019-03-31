@@ -420,7 +420,7 @@ collections:
                 name: "level"
                 widget: "list"
                 fields:
-                  - {label: Name, name: name, widget: "String"}
+                  - {label: Name, name: name, widget: string}
                   - {label: Amount, name: amount, widget: number, valueType: int}
           - label: "Call To Action"
             name: "cta"
