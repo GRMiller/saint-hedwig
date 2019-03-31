@@ -9,7 +9,7 @@ sitemap:
   filename: sitemap.xml
   priority: 0.5
 media_folder: "site/static/media/uploads"
-public_folder: "/media"
+public_folder: "/media/uploads"
 display_url: https://zealous-pike-2f4b9b.netlify.com
 logo_url: https://zealous-pike-2f4b9b.netlify.com/media/logo-image-text.png
 # Beta features
