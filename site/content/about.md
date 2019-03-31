@@ -1,5 +1,7 @@
 ---
 title: About Us
+type: about
+page: /about.html
 hero:
   overlay: blue
   title: About Us
