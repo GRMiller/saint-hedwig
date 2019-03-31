@@ -1,7 +1,7 @@
 ---
-title: Get Involved
-type: getinvolved
-page: /getinvolved.html
+title: How to Help
+type: how_to_help
+page: /how-to-help.html
 menu:
   main:
     name: How to Help

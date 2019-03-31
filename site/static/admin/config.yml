@@ -66,25 +66,209 @@ collections:
                 name: "alignment"
                 widget: "select"
                 options: ["left","center","right"]
-          - label: "Text Section"
-            name: "text"
+          - label: "Who Is Friends of SHP?"
+            name: "who"
             widget: "object"
-            fields: 
+            fields:
               - label: "title"
                 name: title
                 widget: string
-                required: false
               - label: "text"
                 name: text
                 widget: markdown
-              - label: "button"
-                name: button
-                widget: string
+                required: false
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Preferred photo dimensions are ### X ###." #@todo
+              - label: "Direction"
+                name: "direction"
+                widget: "select"
+                options: ["ltr","rtl"]
                 required: false
               - label: "background color"
-                name: background-color
+                name: "overlay"
                 widget: select
                 options: ["red", "blue", "green", "none"]
+          - label: "What Are Our Goals?"
+            name: "what"
+            widget: "object"
+            fields:
+              - label: "title"
+                name: title
+                widget: string
+              - label: "text"
+                name: text
+                widget: markdown
+                required: false
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Preferred photo dimensions are ### X ###." #@todo
+              - label: "Direction"
+                name: "direction"
+                widget: "select"
+                options: ["ltr","rtl"]
+                required: false
+              - label: "background color"
+                name: "overlay"
+                widget: select
+                options: ["red", "blue", "green", "none"]
+          - label: "History of SHP?"
+            name: "history"
+            widget: "object"
+            fields:
+              - label: "title"
+                name: title
+                widget: string
+              - label: "text"
+                name: text
+                widget: markdown
+                required: false
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Preferred photo dimensions are ### X ###." #@todo
+              - label: "Direction"
+                name: "direction"
+                widget: "select"
+                options: ["ltr","rtl"]
+                required: false
+              - label: "background color"
+                name: "overlay"
+                widget: "select"
+                options: ["red", "blue", "green", "none"]
+          - label: "Plans for SHP"
+            name: "plans"
+            widget: "object"
+            fields:
+              - label: "title"
+                name: "title"
+                widget: "string"
+              - label: "text"
+                name: "text"
+                widget: markdown
+                required: false
+              - label: "list"
+                name: "list"
+                widget: "list"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Preferred photo dimensions are ### X ###." #@todo
+              - label: "Direction"
+                name: "direction"
+                widget: "select"
+                options: ["ltr","rtl"]
+                required: false
+              - label: "background color"
+                name: "overlay"
+                widget: select
+                options: ["red", "blue", "green", "none"]
+          - label: "The Beneficiaries"
+            name: "beneficiaries"
+            widget: "object"
+            fields:
+              - label: "title"
+                name: "title"
+                widget: "string"
+              - label: "text"
+                name: "text"
+                widget: markdown
+                required: false
+              - label: "list"
+                name: "list"
+                widget: "list"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Preferred photo dimensions are ### X ###." #@todo
+              - label: "Direction"
+                name: "direction"
+                widget: "select"
+                options: ["ltr","rtl"]
+                required: false
+              - label: "background color"
+                name: "overlay"
+                widget: select
+                options: ["red", "blue", "green", "none"]
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - label: "Text"
+                name: "text"
+                widget: "string"
+              - label: "Button Text"
+                name: "button_text"
+                widget: "string"
+              - label: "Button Destination"
+                name: "button_destination"
+                widget: "string"
+              - label: "Button Color"
+                name: "button_color"
+                widget: "select"
+                options: ["red", "blue", "green", "none"]
+              - label: "Background Color"
+                name: "background_color"
+                widget: "select"
+                options: ["red", "blue", "green", "none"]
+              - label: "Alignment"
+                name: alignment
+                widget: "select"
+                options: ["center", "left", "right"]
+                required: false
+          - label: "People of Friends of SHP"
+            name: "people"
+            widget: "object"
+            fields: 
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Text"
+                name: "text"
+                widget: "string"
+                required: false
+              - label: "People"
+                name: "people"
+                widget: "list"
+                fields: 
+                  - label: "Person"
+                    name: "person"
+                    widget: "object"
+                    fields: 
+                      - {label: Name, name: name, widget: string}
+                      - {label: Byline, name: byline, widget: string, required: false}
+                      - {label: Bio, name: bio, widget: markdown}
+                      - {label: Image, name: image, widget: image}
+          - label: "Donors to Friends of SHP"
+            name: "donors"
+            widget: "object"
+            fields: 
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Text"
+                name: "text"
+                widget: "string"
+                required: false
+              - label: "donors"
+                name: "donors"
+                widget: "list"
+                fields: 
+                  - label: "Donor"
+                    name: "donor"
+                    widget: "object"
+                    fields: 
+                      - {label: Name, name: name, widget: string}
+                      - {label: Byline, name: byline, widget: string}
+                      - {label: Bio, name: bio, widget: markdown}
+                      - {label: Image, name: image, widget: image}
           - label: "SEO"
             name: "seo"
             widget: "object"
@@ -168,18 +352,18 @@ collections:
               name: "metatitle"
               widget: "text"
               required: false
-      - label: "Get Involved"
-        name: "getinvolved"
-        file: "site/content/getinvolved.md"
+      - label: "How to Help"
+        name: "how_to_help"
+        file: "site/content/how-to-help.md"
         fields:
           - label: "Type"
             name: "type"
             widget: "hidden"
-            default: "getinvolved"
+            default: "how-to-help"
           - label: "Page"
             name: "page"
             widget: "hidden"
-            default: "/getinvolved.html"
+            default: "/how-to-help.html"
           - label: "Title"
             name: "title"
             widget: "string"
