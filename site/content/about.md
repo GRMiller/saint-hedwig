@@ -71,24 +71,10 @@ plans:
   title: The Plan
 beneficiaries:
   list:
-    - item: >-
-      Almost 33K people, 11K of whom are children, are living within
-      three-quarters of a mile from the park. 24.7% of the population in this
-      area is below the poverty level and 21.3% of households don't have access
-      to a vehicle.
-    - item: >-
-      The nearly 1,000 students who attend the Academy of the Americas K-8
-      Detroit Public School located across the street enjoy the park daily
-      during their recess, team practices, and school games in SHP.
-      Additionally, 6 other area schools use the park for practice and play
-    - item: >-
-      Numerous Detroit-area recreation leagues use the field already. More will
-      be able to use it as we rebuild
-    - item: >-
-      Community Leaders and families will have access to a new shelter (there is
-      currently no shelter), restrooms, and hydration facilities, allowing for
-      more members of the family to stay out at the park for longer, even on the
-      hottest Michigan summer days.
+    - item: Almost 33K people, 11K of whom are children, are living within three-quarters of a mile from the park. 24.7% of the population in this area is below the poverty level and 21.3% of households don't have access to a vehicle.
+    - item: The nearly 1,000 students who attend the Academy of the Americas K-8 Detroit Public School located across the street enjoy the park daily during their recess, team practices, and school games in SHP. Additionally, 6 other area schools use the park for practice and play
+    - item: Numerous Detroit-area recreation leagues use the field already. More will be able to use it as we rebuild
+    - item: Community Leaders and families will have access to a new shelter (there is currently no shelter), restrooms, and hydration facilities, allowing for more members of the family to stay out at the park for longer, even on the hottest Michigan summer days.
   overlay: red
   title: The Beneficiaries
 cta:
