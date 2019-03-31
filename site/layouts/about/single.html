@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="page page-about">
+<div id="about-page" class="page page-about">
   {{- with .Params.hero -}}
     {{ partial "hero" (dict "title" .Params.hero.title "text" .Params.hero.text "alignment" .Params.hero.alignment "overlay" .Params.hero.overlay) }}
   {{- end -}}
