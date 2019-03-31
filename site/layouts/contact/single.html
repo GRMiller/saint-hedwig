@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="contact-overlay bg-mine-shaft">
+<!-- {{ partial "contact-form" (dict "fill" "#fe8025" "background" "bg-stand-up pv7 bg-center" "color" "white relative") }} -->
+
+<div class="bg-stand-up pt7 pb5 pv7-l ph3 tc tl-l">
+  <div class="mw7 center flex-l justify-top">
+    <form name="contact" method="POST" action="/thank-you/" netlify-honeypot="bot-field" class="center" netlify>
+      <h2 class="white f25 fw4 serif m0">we’re ready to get started</h2>
+
+      <div class="flex-l f1 mb4">
+        <fieldset class="dn">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </fieldset>
+
+        <div class="w-50-l pr4-l">
+          <fieldset class="p0 bn tasty-wrapper">
+            <input type="text" name="name" id="name" class="w-100 tasty-form-item br1 p2 bn dark-theme" placeholder="Name" required>
+            <label for="name" class="tasty-label br2 br--top-left br--bottom-left br--bottom-right">Name</label>
+          </fieldset>
+
+          <fieldset class="p0 bn tasty-wrapper">
+            <input type="email" name="email" id="email" class="w-100 tasty-form-item br1 p2 bn dark-theme" placeholder="Email" required>
+            <label for="email" class="tasty-label br2 br--top-left br--bottom-left br--bottom-right">Email</label>
+          </fieldset>
+        </div>
+
+        <fieldset class="p0 bn w-50-l tasty-wrapper">
+          <textarea name="note" id="note" class="w-100 tasty-form-item br1 p2 h575 bn dark-theme" placeholder="Note" required></textarea>
+          <label for="note" class="tasty-label br2 br--top-left br--bottom-left br--bottom-right">Note</label>
+        </fieldset>
+      </div>
+
+      <input type="submit" value="Submit" class="input-reset button-reset button">
+    </form>
+  </div>
+</div>
+
+</div>
+{{ end }}
