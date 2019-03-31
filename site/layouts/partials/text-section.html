@@ -1,5 +1,5 @@
-<div class="section section-text {{ .alignment }} bg-color--{{ .overlay }} {{ with .image }}has-image section-text-image {{ end }} {{ with .direction }} {{.}} {{ end }}">
-  <div class="inner">
+<div class="section section-text {{ .alignment }} bg-color--{{ if .overlay }}{{ .overlay }}{{ else }}none{{ end }} {{ with .image }}has-image section-text-image {{ end }}">
+  <div class="inner  {{ with .direction }} {{.}} {{ end }}">
     {{- with .image -}}
       <div class="image-wrapper">
         <img src="{{.}}" />
@@ -8,11 +8,11 @@
     {{- end -}}
 
     {{- with .title -}}
-      <h3>{{.}}</h3>
+      <h3 class="title title-tertiary title-text-section">{{.}}</h3>
     {{- end -}}
 
     {{- with .text -}}
-      <p>{{.}}</p>  
+      <p class="text text-text-section">{{.}}</p>  
     {{- end -}}
 
     {{- if (isset . "list") -}}

@@ -1,7 +1,7 @@
 {{- define "main" -}}
 <div id="frontpage" class="page frontpage">
   {{- with .Params.hero -}}
-    {{- partial "hero" (dict "image" .image "title" .title "text" .text "alignment" .alignment "overlay" .overlay) -}}
+    {{- partial "hero" (dict "image" .image "title" .title "subtitle" .subtitle "text" .text "alignment" .alignment "overlay" .overlay) -}}
   {{- end -}}
 
   {{- with .Params.post_hero_text -}}
@@ -9,7 +9,7 @@
   {{- end -}}
 
   {{- with .Params.quote_section -}}
-    {{- partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations) -}}
+    {{- partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations "alignment" .alignment) -}}
   {{- end -}}
 
   {{- with .Params.park_needs -}}
@@ -21,11 +21,11 @@
   {{- end -}}
 
   {{- with .Params.quote_section_two -}}
-    {{- partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations) -}}
+    {{- partial "text-block" (dict "quote" .quote "author" .author "image" .image "overlay" .overlay "quotations" .quotations "alignment" .alignment) -}}
   {{- end -}}
 
   {{- with .Params.cta -}}
-    {{- partial "cta" (dict "text" .text "button_text" .button_text "url" .button_destination "button_color" .button_color "background_color" .background_color) -}}
+    {{- partial "cta" (dict "text" .text "button_text" .button_text "url" .button_destination "button_color" .button_color "background_color" .background_color "alignment" .alignment) -}}
   {{- end -}}
 </div>
 {{- end -}}

@@ -1,16 +1,18 @@
-<div class="section section-text-block overlay-{{ .overlay }}"
+<div class="section section-text-block overlay-{{ .overlay }} {{ .alignment }}"
 
 {{- with .image -}} style="background-image: url({{ . }});" {{- end -}}>
   <div class="inner">
     {{- if (isset . "quotations") -}}
     <div class="quote">
-      <span class="quote-mark"></span>
-      <p class="quote-text">{{- .quote -}}</p>
+      <span class="quote-mark first top"></span>
+      <span class="quote-mark second top"></span>
+      <p class="text quote-text">{{- .quote -}}</p>
       <span class="quote-author">{{- .author -}}</span>
-      <span class="quote-mark"></span>
+      <span class="quote-mark first bottom"></span>
+      <span class="quote-mark second bottom"></span>
     </div>
     {{- else -}}
-    <div class="quote">{{- .quote -}}</div>
+    <div class="text quote-text">{{- .quote -}}</div>
     {{- end -}}
   </div>
 </div>

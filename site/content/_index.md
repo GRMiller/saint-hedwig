@@ -4,14 +4,15 @@ hero:
   image: /images/olivia-bauso-801218-unsplash.jpg
   overlay: blue
   title: Friends of St. Hedwig Park
-  text: A neighborhood reimagined through collaboration
+  subtitle: A neighborhood reimagined through collaboration
+  text: Parks and playgrounds are the soul of a community. We believe in Detroit's communities
   button: true
   alignment: center
 post_hero_text:
   title:
   text: |-
     St. Hedwig Park provides recreation, joy, and community to an estimated 33,000 people in Southwest Detroit. Seven schools, countless families, numerous recreational leagues, and 900+ PK to 8th graders across the street at Academy of Americas call St. Hedwig their own. But for too long they've had to take care of it alone. 
-    
+      
     The Friends of St. Hedwig Park builds on the progress of the SHP Coalition and the City of Detroit by working alongside an enthusiastic group of neighbors, coaches, teachers, and non-profits. St. Hedwig Park is an unmistakable opportunity to enhance social, economic, and recreational activity in Southwest Detroit.
   link: Learn More
   url: /about
@@ -24,11 +25,12 @@ quote_section:
   image: /images/pengsheng-guo-134596-unsplash.jpg
   overlay: red
   quotations: true
+  alignment: center
 park_needs:
   image: /images/image001.jpg
   direction: ltr
-  title: Give a Little Love
-  text: While St. Hedwig Park is used and enjoyed daily by hundreds of people, it could use a little love. The fields flood easily, the bathrooms are outdated, and the only gathering shelter was recently torn down due to deterioration. Friends of St. Hedwig Park initiated a community survey to find out what the community most wanted. Their response was unanimous in wanting
+  title: The Needs
+  text: Friends of St. Hedwig Park initiated a community survey to find out what the community most wanted. Their response was unanimous in wanting
   list:
     - item: Greater Safety
     - item: A Gathering Place
@@ -57,12 +59,14 @@ quote_section_two:
   image: /images/image002.jpg
   overlay: green
   quotations: true
+  alignment: center;
 cta:
-  text: We want to hear from you
-  button_text: How to Help
-  button_destination: /how-to-help
+  text: Download our Corporate Fundraising Package!
+  button_text: Download
+  button_destination: /uploads/Friends_of_St_Hedwig_Park_Corporate_Package.pdf
   button_color: green
   background_color: red
+  alignment: center
 seo_description: "Friends of St. Hedwig Park"
 metatitle: "Friends of St. Hedwig Park"
 ---
