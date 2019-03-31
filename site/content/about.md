@@ -2,6 +2,10 @@
 title: About Us
 type: about
 page: /about.html
+menu:
+  main:
+    name: About Us
+    weight: 1
 hero:
   overlay: blue
   title: About Us
