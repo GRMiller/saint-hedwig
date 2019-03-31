@@ -669,6 +669,7 @@ a:focus {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .giving-wrapper li {
   list-style: none;
   width: 100%;
@@ -685,13 +686,13 @@ a:focus {
     width: 50%;
   }
 }
-.
+
 /*
 *
 * Text Styles
 *
  */
- .title {
+.title {
   font-family: 'Abril Fatface'; /* @todo: add backups */
 }
 
