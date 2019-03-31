@@ -18,7 +18,7 @@
     {{- if (isset . "list") -}}
       <ul class="list">
         {{- range .list -}}
-          <li class="list-item">{{ .item }}</li>
+          <li class="list-item">{{ .item | markdownify }}</li>
         {{- end -}}
       </ul> 
     {{- end -}}
