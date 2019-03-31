@@ -408,6 +408,7 @@ collections:
               - label: "Level"
                 name: "level"
                 widget: "list"
+                fields:
                   - {label: Name, name: name, widget: "String"}
                   - {label: Amount, name: amount, widget: number, valueType: int}
           - label: "SEO"
