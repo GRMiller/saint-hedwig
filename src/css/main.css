@@ -73,6 +73,9 @@ p {
   font-size: 1.125rem;
   line-height: 1.375;
 }
+p + p {
+  margin-top: 1rem;
+}
 
 ul,
 ol {

@@ -8,11 +8,11 @@
     {{- end -}}
 
     {{- with .title -}}
-      <h3 class="title title-tertiary title-text-section">{{.}}</h3>
+      <h3 class="title title-tertiary title-text-section">{{ . | markdownify }}</h3>
     {{- end -}}
 
     {{- with .text -}}
-      <p class="text text-text-section">{{.}}</p>  
+      <p class="text text-text-section">{{ . | markdownify }}</p>  
     {{- end -}}
 
     {{- if (isset . "list") -}}
