@@ -183,6 +183,7 @@ collections:
               - label: "list"
                 name: "list"
                 widget: "list"
+                field: {label: Text, name: text, widget: string}
               - label: "Image"
                 name: "image"
                 widget: "image"
@@ -247,6 +248,7 @@ collections:
               - label: "Title"
                 name: "title"
                 widget: "string"
+                required: false
               - label: "Text"
                 name: "text"
                 widget: "string"
@@ -254,6 +256,7 @@ collections:
               - label: "People"
                 name: "people"
                 widget: "list"
+                required: false
                 fields: 
                   - label: "Person"
                     name: "person"
@@ -266,6 +269,7 @@ collections:
           - label: "Donors to Friends of SHP"
             name: "donors"
             widget: "object"
+            required: false
             fields: 
               - label: "Title"
                 name: "title"
@@ -352,6 +356,7 @@ collections:
           - label: "Text"
             name: "text"
             widget: "object"
+            required: false
             fields:
               - label: "Title"
                 name: "title"
@@ -443,6 +448,7 @@ collections:
           - label: "Giving"
             name: "giving"
             widget: "object"
+            required: false
             fields:
               - label: "Title"
                 name: "title"
