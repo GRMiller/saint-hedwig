@@ -5,7 +5,7 @@ hero:
   overlay: blue
   title: Friends of St. Hedwig Park
   subtitle: A neighborhood reimagined through collaboration
-  text: Parks and playgrounds are the soul of a community. We believe in Detroit's communities
+  text: We believe in the great neighborhoods of Detroit. We also believe that parks and playgrounds are the soul of a neighborhood.
   button: true
   alignment: center
 post_hero_text:
