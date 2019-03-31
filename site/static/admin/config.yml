@@ -332,6 +332,17 @@ collections:
                 name: "alignment"
                 widget: "select"
                 options: ["left","center","right"]      
+          - label: "Text"
+            name: "text"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                required: false
+              - label: "Text"
+                name: "text"
+                widget: "markdown"
           - label: "SEO"
             name: "seo"
             widget: "object"

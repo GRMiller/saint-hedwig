@@ -1,31 +1,40 @@
 {{ define "main" }}
-<div class="form-wrapper">
-  <form name="contact" method="POST" action="/thank-you/" netlify-honeypot="bot-field" class="center form form-contact" netlify>
-    <h2 class="title title-secondary title-form">we’re ready to get started</h2>
+<div id="contact-page" class="page page-contact">
+    {{- with .Params.hero -}}
+      {{ partial "hero" (dict "title" .title "text" .text "alignment" .alignment "overlay" .overlay) }}
+    {{- end -}}
 
-    <div class="fieldset-wrapper">
-      <fieldset class="fieldset hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-      </fieldset>
+    {{- with .Params.text -}}
+      {{ partial "text-section" (dict "title" .title "text" .text "alignment" .alignment "overlay" .overlay "image" .image "direction" .direction) }}
+    {{- end -}}
+    
+  <div class="form-wrapper">
+    <form name="contact" method="POST" action="/thank-you/" netlify-honeypot="bot-field" class="center form form-contact" netlify>
+      
+      <div class="fieldset-wrapper">
+        <fieldset class="fieldset hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </fieldset>
 
-      <fieldset class="fieldset">
-        <input type="text" name="name" id="name" class="input form-input input-text" placeholder="Name" required>
-        <label for="name" class="label label-text">Name</label>
-      </fieldset>
+        <fieldset class="fieldset">
+          <input type="text" name="name" id="name" class="input form-input input-text" placeholder="Name" required>
+          <label for="name" class="label label-text">Name</label>
+        </fieldset>
 
-      <fieldset class="fieldset">
-        <input type="email" name="email" id="email" class="input form-input input-email" placeholder="Email" required>
-        <label for="email" class="label label-email">Email</label>
-      </fieldset>
+        <fieldset class="fieldset">
+          <input type="email" name="email" id="email" class="input form-input input-email" placeholder="Email" required>
+          <label for="email" class="label label-email">Email</label>
+        </fieldset>
 
-      <fieldset class="fieldset">
-        <textarea name="note" id="note" class="input form-input input-textarea" placeholder="Note" required></textarea>
-        <label for="note" class="label label-textarea">Note</label>
-      </fieldset>
-    </div>
+        <fieldset class="fieldset">
+          <textarea name="note" id="note" class="input form-input input-textarea" placeholder="Note" required></textarea>
+          <label for="note" class="label label-textarea">Note</label>
+        </fieldset>
+      </div>
 
 
-    <input type="submit" value="Submit" class="input input-submit button-reset button">
-  </form>
+      <input type="submit" value="Submit" class="input input-submit button-reset button">
+    </form>
+  </div>
 </div>
 {{ end }}
