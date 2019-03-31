@@ -357,7 +357,8 @@ a:focus {
   max-width: 1440px;
 }
 
-.page { /* @todo can i change this to .header + div */
+.page,
+.footer { /* @todo can i change this to .header + div */
   position: relative;
   top: var(--header-height, 90px);
 }
@@ -379,6 +380,10 @@ a:focus {
   .logo {
     height: 60px;
   }
+}
+
+.link-logo {
+  background-image: none;
 }
 
 /*
@@ -684,4 +689,75 @@ a:focus {
 .text-hero {
   font-size: 1.125em;
   margin: 1rem 0;
+}
+
+/*
+*
+* Dirty @todo: Refactor
+*
+ */
+
+.menu a {
+  background-image: none;
+}
+
+/* Contact */
+.form-wrapper .hidden {
+  display: none;
+}
+
+.fieldset {
+  border: none;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+.form-wrapper {
+  border: 2px solid #000;
+  border-radius: 2px;
+  margin: 1rem;
+}
+
+.form-wrapper .label {
+  display: none;
+}
+
+.form-wrapper .fieldset {
+  margin: 1rem 0;
+}
+
+.form-wrapper .input {
+  display: inline-block;
+  height: 2.5rem;
+  width: 75%;
+}
+
+.form-wrapper .input-textarea {
+  height: 5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-gray-dark);
+  color: #fff;
+}
+
+.footer > .inner {
+  padding: 1rem 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 .5em;
+  margin-right: 1rem;
+}
+.footer a {
+  color: #fff;
 }
