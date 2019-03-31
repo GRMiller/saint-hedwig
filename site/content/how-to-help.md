@@ -32,5 +32,9 @@ cta:
   button_destination: /contact
   button_text: Contact Us
   text: Contact Us for more information!
+menu:
+  main:
+    name: How to Help
+    weight: '2'
 ---
 
