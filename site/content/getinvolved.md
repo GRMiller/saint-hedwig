@@ -9,5 +9,5 @@ menu:
 hero:
   overlay: blue
   title: How to Help
-  text: WE are currently fundraising for: Look out for X upcoming events!
+  text: WE are currently fundraising for X. Look out for Y upcoming events!
 ---
