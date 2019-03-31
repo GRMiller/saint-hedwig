@@ -5,7 +5,7 @@ page: /getinvolved.html
 menu:
   main:
     name: How to Help
-    weight: 1
+    weight: 2
 hero:
   overlay: blue
   title: How to Help
