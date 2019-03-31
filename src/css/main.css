@@ -654,6 +654,38 @@ a:focus {
     width: 50%;
   }
 }
+
+/* Giving */
+.section-giving {
+  padding: 0;
+}
+
+.section-giving .text-wrapper {
+  padding: 1rem 20px;
+}
+
+.giving-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.giving-wrapper li {
+  list-style: none;
+  width: 100%;
+}
+
+@media (min-width: 56.25em) {
+  .section-giving > .inner {
+    display: flex;
+  }
+
+  .section-giving .text-wrapper,
+  .section-giving .giving-wrapper {
+    margin: 0;
+    width: 50%;
+  }
+}
+.
 /*
 *
 * Text Styles
@@ -667,7 +699,8 @@ a:focus {
   padding: 0 0 1em 0;
 }
 
-.title-text-section {
+.title-text-section,
+.title-giving {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5em;
   font-weight: 500;
@@ -686,7 +719,8 @@ a:focus {
   font-weight: 600;
 }
 
-.text-hero {
+.text-hero,
+.text-giving {
   font-size: 1.125em;
   margin: 1rem 0;
 }
