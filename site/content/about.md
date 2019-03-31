@@ -13,7 +13,6 @@ hero:
   title: About Us
 who:
   direction: ltr
-  image: /media/image006.jpg
   overlay: green
   text: >-
     Friends of St. Hedwig Park is a collaborative group of individuals,
@@ -27,7 +26,6 @@ who:
   title: Who is Friends of St. Hedwig Park?
 what:
   direction: rtl
-  image: /media/image003.jpg
   overlay: red
   text: >-
     The St. Hedwig Park Project is an opportunity to enhance social, economic,
