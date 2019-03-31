@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div id="getinvolved-page" class="page page-getinvolved">
+  {{- with .Params.hero -}}
+    {{ partial "hero" (dict "title" .title "text" .text "alignment" .alignment "overlay" .overlay "image" .image) }}
+  {{- end -}}
+  
+  {{- with .Params.text -}}
+    {{ partial "text-section" (dict "title" .title "text" .text "alignment" .alignment "overlay" .overlay "image" .image "direction" .direction) }}
+  {{- end -}}
+
+  {{- with .Params.giving -}}
+    <div class="section-giving">
+      <div class="text-wrapper">
+        <h3 class="title title-tertiary title-giving">{{ .title }}</h3>
+        <p class="text text-giving">{{ .text }}</p>
+      </div>
+      <div class="giving-wrapper">
+        <ul class="list-giving list">
+        {{ range .level }}
+          <li class="item item-giving">
+            <span class="giving-level-title">{{ .level.name }}</span>
+            <span class="giving-level-amount">{{ .level.amount }}</span>
+          </li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+  {{- end -}}
+</div>
+{{ end }}

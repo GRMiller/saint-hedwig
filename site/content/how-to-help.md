@@ -9,5 +9,10 @@ menu:
 hero:
   overlay: blue
   title: How to Help
-  text: WE are currently fundraising for X. Look out for Y upcoming events!
+  text: You or your organization can make a difference. All us contribute to the rebuilding of our City.
+giving:
+  title: How you can help
+  text: |- 
+    All it takes is a donation, sponsorship, or an in-kind contribution.  
+    If now is not the right time for you to donate, consider sharing our facebook page or coming to our next community event!
 ---
