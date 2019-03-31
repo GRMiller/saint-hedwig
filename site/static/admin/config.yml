@@ -18,10 +18,10 @@ publish_mode: editorial_workflow
 # Collections
 #
 collections:
-  # Pages
-  - name: "Pages"
-    label: "Page"
-    folder: "site/content/pages"
+  # Posts
+  - name: "Posts"
+    label: "Posts"
+    folder: "site/content/posts"
     create: true
     editor:
       preview: false
@@ -91,5 +91,67 @@ collections:
         name: "metatitle"
         widget: "text"
         required: false
-
-
+  
+  - label: "Pages"
+    name: "pages"
+    editor:
+      preview: false
+    files:
+      - label: "About"
+        name: "about"
+        file: "site/content/about.md"
+        fields:
+          - label: "Type"
+            name: "type"
+            widget: "hidden"
+            default: "about"
+          - label: "Page"
+            name: "page"
+            widget: hidden
+            default: "/about.html"
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - label: "Hero Image"
+                name: "image"
+                widget: "image"
+                required: false
+                hint: "Preferred photo dimensions are ### X ###." #@todo
+              - label: "Media Overlay/Background Color"
+                name: "overlay"
+                widget: "select"
+                options: ["none","blue","green","red","gray - dark","gray - light"]
+              - label: "Hero Title"
+                name: "title"
+                widget: "string"
+              - label: "Hero Subtitle"
+                name: "subtitle"
+                widget: "string"
+              - label: "Hero Text"
+                name: "text"
+                widget: "string"
+                required: false
+              - label: "Alignment"
+                name: "alignment"
+                widget: "select"
+                options: ["left","center","right"]
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+            - label: "SEO noindex"
+              name: "noindex"
+              widget: boolean
+              required: false
+            - label: "SEO nofollow"
+              name: "nofollow"
+              widget: boolean
+              required: false
+            - label: "Meta Title"
+              name: "metatitle"
+              widget: "text"
+              required: false
