@@ -416,12 +416,13 @@ a:focus {
 }
 
 .menu-main .menu-item a {
+  background-image: none;
   color: var(--blue);
   display: inline-block;
   font-family: 'Raleway';
   font-size: 1.75rem;
   font-weight: 500;
-  padding: 1rem;
+  padding: .75rem 1rem;
   text-decoration: none;
 }
 
@@ -522,6 +523,10 @@ a:focus {
   background-size: cover;
   background-position: center;
   padding: 6rem 20px;
+}
+
+.section-hero.no-image {
+  padding: 3.5rem 20px;
 }
 
 .section-hero > .inner {
@@ -678,5 +683,5 @@ a:focus {
 
 .text-hero {
   font-size: 1.125em;
-  margin: 1rem;
+  margin: 1rem 0;
 }
