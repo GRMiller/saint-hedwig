@@ -223,6 +223,23 @@ collections:
                 widget: "select"
                 options: ["center", "left", "right"]
                 required: false
+        - label: "Menu Settings"
+          name: "menu"
+          widget: "object"
+          fields:
+            - label: "Main Menu"
+              name: "main"
+              widget: "object"
+              fields:
+                - label: "Name"
+                  name: "name"
+                  widget: "string"
+                - label: "Weight"
+                  name: "weight"
+                  type: "number"
+                  valueType: "int"
+                  min: 0
+                  max: 100
           - label: "People of Friends of SHP"
             name: "people"
             widget: "object"
@@ -343,6 +360,23 @@ collections:
               - label: "Text"
                 name: "text"
                 widget: "markdown"
+          - label: "Menu Settings"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Main Menu"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Name"
+                    name: "name"
+                    widget: "string"
+                  - label: "Weight"
+                    name: "weight"
+                    type: "number"
+                    valueType: "int"
+                    min: 0
+                    max: 100
           - label: "SEO"
             name: "seo"
             widget: "object"
@@ -452,6 +486,23 @@ collections:
                 widget: "select"
                 options: ["center", "left", "right"]
                 required: false
+          - label: "Menu Settings"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Main Menu"
+                name: "main"
+                widget: "object"
+                fields:
+                  - label: "Name"
+                    name: "name"
+                    widget: "string"
+                  - label: "Weight"
+                    name: "weight"
+                    type: "number"
+                    valueType: "int"
+                    min: 0
+                    max: 100
           - label: "SEO"
             name: "seo"
             widget: "object"
